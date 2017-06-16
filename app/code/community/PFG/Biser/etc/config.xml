@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <modules>
+        <PFG_Biser>
+            <version>0.0.1</version>
+        </PFG_Biser>
+    </modules>
+    <global>
+        <blocks>
+            <pfg_biser>
+                <class>PFG_Biser_Block</class>
+            </pfg_biser>
+        </blocks>
+        <helpers>
+            <pfg_biser>
+                <class>PFG_Biser_Helper</class>
+            </pfg_biser>
+        </helpers>
+        <events>
+            <catalog_product_save_before>
+                <observers>
+                    <module>
+                        <type>singleton</type>
+                        <class>PFG_Biser_Model_Observer</class>
+                        <method>catalogProductSaveBefore</method>
+                    </module>
+                </observers>
+            </catalog_product_save_before>
+        </events>
+    </global>
+    <frontend>
+        <routers>
+            <customer>
+                <args>
+                    <modules>
+                        <PFG_Biser before="Mage_Customer">PFG_Biser_Customer</PFG_Biser>
+                    </modules>
+                </args>
+            </customer>
+        </routers>
+        <layout>
+            <updates>
+                <pfg_biser module="PFG_Biser">
+                    <file>pfg_biser.xml</file>
+                </pfg_biser>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <pfg_biser_options>
+                                            <title>PFG Biser Module Section</title>
+                                        </pfg_biser_options>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>

@@ -1,0 +1,13 @@
+{
+  "name": "biserantonov/pfg",
+  "description": "Test Magento Plugin",
+  "type": "magento-module",
+  "homepage": "https://github.com/biserantonov/pfg",
+  "license": "OSL-3.0",
+  "authors": [
+    {
+      "name": "Biser Antonov",
+      "email": "biser.antonov@gmail.com"
+    }
+  ]
+}

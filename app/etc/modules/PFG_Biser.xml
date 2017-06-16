@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <PFG_Biser>
+            <active>true</active>
+            <codePool>community</codePool>
+        </PFG_Biser>
+    </modules>
+</config>
